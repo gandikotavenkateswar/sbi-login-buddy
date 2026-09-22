@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/login-success")({
   validateSearch: (search: Record<string, unknown>) => ({
-    user: typeof search.user === "string" ? search.user : "demo.user",
+    user: typeof search["user"] === "string" ? search["user"] : "demo.user",
   }),
   head: () => ({
     meta: [
