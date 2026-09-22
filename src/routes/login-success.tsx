@@ -28,7 +28,8 @@ export const Route = createFileRoute("/login-success")({
 
 function LoginSuccessPage() {
   const navigate = useNavigate();
-  const { user } = useSearch({ from: "/login-success" });
+  const search = useSearch({ from: "/login-success" });
+  const user = search["user"];
 
   return (
     <main className="min-h-screen bg-bank-navy text-bank-on-navy">
